@@ -11,10 +11,14 @@
             // Redirect to the respective app store
             if (/android/i.test(userAgent)) {
                 window.location.href = 'appspace://';
-                window.location.href = 'https://play.google.com/store/apps/details?id=com.appspace.mobile&hl=en_US&gl=US'; // Android app link
+                setTimeout(function() {
+                    window.location.href = 'https://play.google.com/store/apps/details?id=com.appspace.mobile&hl=en_US&gl=US'; // Android app link
+                }, 1500);
             } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
                 window.location.href = 'appspace://';
-                window.location.href = 'https://apps.apple.com/us/app/appspace/id1537783177'; // iOS app link
+                setTimeout(function() {
+                    window.location.href = 'https://apps.apple.com/us/app/appspace/id1537783177'; // iOS app link
+                }, 1500);
             } else {
                 window.location.href = 'https://upstate-oneup.cloud.appspace.com/console/#!/browse/home'; // Redirect to your website or default page
             }
